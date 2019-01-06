@@ -370,7 +370,7 @@ bool TebLocalPlannerROS::computeVelocityCommands(geometry_msgs::Twist& cmd_vel)
     //method0 publiish odom_topic
     std_msgs::String msg;
     msg.data = "'TebLocalPlannerROS: trajectory is not feasible' occured";
-    my_pub.publish(msg);    //Publish String message
+    not_feasible_pub.publish(msg);    //Publish String message
 
     /*method1 the simple one, directly works
     std_srvs::Empty srv;
